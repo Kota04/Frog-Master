@@ -8,7 +8,9 @@ class App(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("Frog Master")
-        self.geometry("900x600")
+        self._max_width = 1200  # Set your max width here
+        self._max_height = 800  # Set your max height here
+        self.geometry(f"{self._max_width}x{self._max_height}")
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("green")
 
@@ -18,7 +20,7 @@ class App(ctk.CTk):
         self.bg_photo = ImageTk.PhotoImage(self.bg_image)
         self.canvas.create_image(0, 0, anchor='nw', image=self.bg_photo)
 
-        self.container = ctk.CTkFrame(self, width=450, height=450, corner_radius=50)  # Fixed size for the container
+        self.container = ctk.CTkFrame(self, width=450, height=450)  # Fixed size for the container
         self.container.grid(row=0, column=0)
         self.container.grid_propagate(False)
 
@@ -45,10 +47,6 @@ class App(ctk.CTk):
             self.container.configure(width=self.winfo_screenwidth(), height=self.winfo_screenheight())
             self.container.grid(row=0, column=0, sticky="nsew")
             frame.grid(row=0, column=0, sticky="nsew")
-            self.grid_rowconfigure(0, weight=1)
-            self.grid_columnconfigure(0, weight=1)
-            frame.grid_rowconfigure(0, weight=1)
-            frame.grid_columnconfigure(0, weight=1)
         else:
             # Reset the container size and re-center it
             self.container.configure(width=450, height=450)
