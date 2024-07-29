@@ -60,9 +60,35 @@ class AnalyzeRealTimePage(ctk.CTkFrame):
         destination_ip = self.DestinationIP.get()
         selected_protocols = [protocol for protocol, var in self.protocol_vars.items() if var.get()]
         interface = self.Interfaces.get()
+
         print(f"Source IP: {source_ip}")
         print(f"Destination IP: {destination_ip}")
         print(f"Protocols: {selected_protocols}")
         print(f"Interface: {interface}")
 
-        # TODO: Implement the logic to send the pcap file to VirusTotal and get the results
+        # Build the tshark command base
+        tshark_command = ['tshark', '-i', interface]
+
+        # Build filter string
+        filters = []
+        if source_ip:
+            filters.append(f"ip src {source_ip}")
+        if destination_ip:
+            filters.append(f"ip dst {destination_ip}")
+        if selected_protocols:
+            protocol_filters = ' or '.join([f'proto {protocol.lower()}' for protocol in selected_protocols])
+            filters.append(f"({protocol_filters})")
+
+        if filters:
+            filter_str = ' and '.join(filters)
+            tshark_command.extend(['-f', filter_str])
+        shell_script_path = './CaptureTraffic.sh'
+        try:
+            result = subprocess.run(['sudo','bash', shell_script_path], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            print('Success')
+        except subprocess.CalledProcessError as e:
+            print(f"Shell script failed with exit code {e.returncode}")
+            print(f"Error output:\n{e.stderr}")
+            
+        #! Todo: Send the files into vTotal 
+        
