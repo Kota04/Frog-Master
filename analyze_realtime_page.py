@@ -89,5 +89,3 @@ class AnalyzeRealTimePage(ctk.CTkFrame):
         except subprocess.CalledProcessError as e:
             print(f"Shell script failed with exit code {e.returncode}")
             print(f"Error output:\n{e.stderr}")
-            
-        #! TODO : Show the result in a new window

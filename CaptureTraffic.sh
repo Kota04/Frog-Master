@@ -17,7 +17,7 @@ if [ ! -d "$export_dir" ]; then
 fi
 
 # Capture traffic
-tshark -i eth0 -w "$file" -c 1000
+tshark -i wlp0s20f3 -w "$file" -c 1000
 
 # List of protocols to extract
 protocols=("http" "smb" "imf" "tftp" "ftp-data" "dicom")
