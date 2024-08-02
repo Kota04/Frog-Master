@@ -1,7 +1,8 @@
 import customtkinter as ctk
 from tkinter import filedialog
 import os
-import requests
+import subprocess
+import requests  # You might use this if you need to make additional HTTP requests
 
 class AnalyzePastTimePage(ctk.CTkFrame):
     def __init__(self, parent, controller):
@@ -40,24 +41,25 @@ class AnalyzePastTimePage(ctk.CTkFrame):
                 self.status_label.configure(text=f"File '{os.path.basename(self.file_path)}' uploaded successfully.")
 
     def submit(self):
-        #! TODO: Implement the logic to send the pcap file to VirusTotal and get the results
         if self.file_path:
-            url = "https://www.virustotal.com/api/v3/files" 
-            api_key = "YOUR_VIRUSTOTAL_API_KEY"  
-
-            headers = {
-                "x-apikey": api_key
-            }
-            
-            files = {
-                "file": open(self.file_path, "rb")  
-            }
-            
+            # Run the shell script with the file path as an argument
+            script_path = "./PastTraffic.sh"
             try:
-                response = requests.post(url, headers=headers, files=files)
-                response.raise_for_status() # Parse JSON response
-                self.status_label.configure(text=f"Submission successful. Result: {result}")
-            except requests.RequestException as e:
-                self.status_label.configure(text=f"Error submitting file: {e}")
+                # Call the shell script with the file path
+                result = subprocess.run(['sudo','bash', script_path, self.file_path], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+                
+                # Handle script output
+                if result.returncode == 0:
+                    self.status_label.configure(text="File processed successfully.")
+                    # Optionally, you can display the script output
+                    print(result.stdout)
+                else:
+                    self.status_label.configure(text="Failed to process file.")
+                    print(result.stderr)
+                    
+            except Exception as e:
+                print(e)
+                self.status_label.configure(text=f"An error occurred: {str(e)}")
         else:
-            self.status_label.configure(text="No file selected.")
+            self.status_label.configure(text="Please upload a file first.")
+        

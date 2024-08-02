@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from PIL import Image, ImageTk
+#from PIL import Image, ImageTk
 from MyLogin import MyLogin
 from MySignup import MySignup
 from MainContent import MainContent
@@ -14,11 +14,11 @@ class App(ctk.CTk):
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("green")
 
-        self.canvas = ctk.CTkCanvas(self)
-        self.canvas.grid(row=0, column=0, sticky="nsew")
-        self.bg_image = Image.open("./assets/pattern.png")
-        self.bg_photo = ImageTk.PhotoImage(self.bg_image)
-        self.canvas.create_image(0, 0, anchor='nw', image=self.bg_photo)
+        # self.canvas = ctk.CTkCanvas(self)
+        # self.canvas.grid(row=0, column=0, sticky="nsew")
+        # self.bg_image = Image.open("./assets/pattern.png")
+        # self.bg_photo = ImageTk.PhotoImage(self.bg_image)
+        # self.canvas.create_image(0, 0, anchor='nw', image=self.bg_photo)
 
         self.container = ctk.CTkFrame(self, width=450, height=450)  # Fixed size for the container
         self.container.grid(row=0, column=0)

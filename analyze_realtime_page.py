@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from PIL import Image, ImageTk
+# from PIL import Image, ImageTk
 import subprocess
 
 class AnalyzeRealTimePage(ctk.CTkFrame):
@@ -90,5 +90,4 @@ class AnalyzeRealTimePage(ctk.CTkFrame):
             print(f"Shell script failed with exit code {e.returncode}")
             print(f"Error output:\n{e.stderr}")
             
-        #! Todo: Send the files into vTotal 
-        
+        #! TODO : Show the result in a new window

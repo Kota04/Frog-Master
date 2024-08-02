@@ -1,23 +1,23 @@
 #!/bin/bash
 
+# Check if the correct number of arguments are provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <file_path>"
+    exit 1
+fi
+
 # File paths
-file="CaptureTraffic.pcap"
+file="$1"
 export_dir="/Files/"
-results_file="/Files/analysis_results.txt"
+results_file="analysis_results.txt"
 api_key="1579c2e194f3e92a6670aaf26dd446bd7e2559d832d59057b233a72d09ad5b4b"
 
-# Create file and set permissions
-touch "$file"
-chmod 777 "$file"
-
+chmod 777 $file
 # Ensure the export directory exists
 if [ ! -d "$export_dir" ]; then
     echo "Export directory $export_dir does not exist. Creating it..."
     mkdir -p "$export_dir"
 fi
-
-# Capture traffic
-tshark -i eth0 -w "$file" -c 1000
 
 # List of protocols to extract
 protocols=("http" "smb" "imf" "tftp" "ftp-data" "dicom")
