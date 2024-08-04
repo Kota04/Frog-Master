@@ -60,15 +60,13 @@ class AnalyzeRealTimePage(ctk.CTkFrame):
         destination_ip = self.DestinationIP.get()
         selected_protocols = [protocol for protocol, var in self.protocol_vars.items() if var.get()]
         interface = self.Interfaces.get()
-
+    
+        # Print the details for debugging
         print(f"Source IP: {source_ip}")
         print(f"Destination IP: {destination_ip}")
         print(f"Protocols: {selected_protocols}")
         print(f"Interface: {interface}")
-
-        # Build the tshark command base
-        tshark_command = ['tshark', '-i', interface]
-
+    
         # Build filter string
         filters = []
         if source_ip:
@@ -78,14 +76,24 @@ class AnalyzeRealTimePage(ctk.CTkFrame):
         if selected_protocols:
             protocol_filters = ' or '.join([f'proto {protocol.lower()}' for protocol in selected_protocols])
             filters.append(f"({protocol_filters})")
-
+    
         if filters:
             filter_str = ' and '.join(filters)
-            tshark_command.extend(['-f', filter_str])
+            filter_str = f"-f {filter_str}"  # Prefix the filter string with "-f"
+        else:
+            filter_str = ''  # No filters if nothing is specified
+    
+        # Print the constructed filter string for debugging
+        print(f"Filter string: {filter_str}")
+    
+        # Construct the command with the filter string and interface
         shell_script_path = './CaptureTraffic.sh'
         try:
-            result = subprocess.run(['sudo','bash', shell_script_path], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            # Note: Ensure that the CaptureTraffic.sh script can handle the filter string argument
+            result = subprocess.run(['sudo', 'bash', shell_script_path, interface, filter_str],
+                                    check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
             print('Success')
+            print(f"Output:\n{result.stdout}")
         except subprocess.CalledProcessError as e:
             print(f"Shell script failed with exit code {e.returncode}")
             print(f"Error output:\n{e.stderr}")

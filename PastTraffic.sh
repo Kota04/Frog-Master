@@ -8,16 +8,20 @@ fi
 
 # File paths
 file="$1"
-export_dir="/Files/"
+export_dir="/home/kota/Frog-Master/Files/"
 results_file="analysis_results.txt"
 api_key="1579c2e194f3e92a6670aaf26dd446bd7e2559d832d59057b233a72d09ad5b4b"
 
-chmod 777 $file
-# Ensure the export directory exists
-if [ ! -d "$export_dir" ]; then
-    echo "Export directory $export_dir does not exist. Creating it..."
-    mkdir -p "$export_dir"
+# Set permissions for the file
+chmod 777 "$file"
+
+# Remove the export directory if it exists and create a new one
+if [ -d "$export_dir" ]; then
+    echo "Export directory $export_dir exists. Removing it..."
+    rm -rf "$export_dir"
 fi
+echo "Creating export directory $export_dir..."
+mkdir -p "$export_dir"
 
 # List of protocols to extract
 protocols=("http" "smb" "imf" "tftp" "ftp-data" "dicom")
