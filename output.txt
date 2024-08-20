@@ -1,0 +1,1051 @@
+{
+    "data": {
+        "id": "3e035f2d7d30869ce53171ef5a0f761bfb9c14d94d9fe6da385e20b8d96dc2fb",
+        "type": "file",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/3e035f2d7d30869ce53171ef5a0f761bfb9c14d94d9fe6da385e20b8d96dc2fb"
+        },
+        "attributes": {
+            "type_extension": "exe",
+            "total_votes": {
+                "harmless": 0,
+                "malicious": 6
+            },
+            "sigma_analysis_stats": {
+                "high": 1,
+                "medium": 0,
+                "critical": 0,
+                "low": 3
+            },
+            "crowdsourced_yara_results": [
+                {
+                    "ruleset_id": "01598e8db9",
+                    "rule_name": "Windows_Ransomware_Conti_89f3f6fa",
+                    "ruleset_name": "Windows_Ransomware_Conti",
+                    "match_in_subfile": true,
+                    "author": "Elastic Security",
+                    "source": "https://github.com/elastic/protections-artifacts"
+                },
+                {
+                    "ruleset_id": "01598e8db9",
+                    "rule_name": "Windows_Ransomware_Conti_89f3f6fa",
+                    "ruleset_name": "Windows_Ransomware_Conti",
+                    "author": "Elastic Security",
+                    "match_date": 1724178829,
+                    "source": "https://github.com/elastic/protections-artifacts"
+                },
+                {
+                    "description": "Conti Ransomware",
+                    "author": "kevoreilly",
+                    "ruleset_name": "Conti",
+                    "rule_name": "Conti",
+                    "ruleset_id": "00bcdd5f00",
+                    "match_in_subfile": true,
+                    "source": "https://github.com/kevoreilly/CAPEv2"
+                },
+                {
+                    "ruleset_id": "00bcdd5f00",
+                    "rule_name": "Conti",
+                    "ruleset_name": "Conti",
+                    "description": "Conti Ransomware",
+                    "author": "kevoreilly",
+                    "match_date": 1724178829,
+                    "source": "https://github.com/kevoreilly/CAPEv2"
+                }
+            ],
+            "tlsh": "T12D63D64AB749EB30F59694B996FC2A17688E8938835F85C3FBD0C05A7651CC6B834F13",
+            "creation_date": 3632400331,
+            "last_analysis_results": {
+                "Bkav": {
+                    "method": "blacklist",
+                    "engine_name": "Bkav",
+                    "engine_version": "2.0.0.1",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "W32.AIDetectMalware"
+                },
+                "Lionic": {
+                    "method": "blacklist",
+                    "engine_name": "Lionic",
+                    "engine_version": "8.16",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Win32.BlueSky.tszt"
+                },
+                "tehtris": {
+                    "method": "blacklist",
+                    "engine_name": "tehtris",
+                    "engine_version": "v0.1.4",
+                    "engine_update": "20240820",
+                    "category": "undetected",
+                    "result": null
+                },
+                "DrWeb": {
+                    "method": "blacklist",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.65.5230",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Encoder.35508"
+                },
+                "MicroWorld-eScan": {
+                    "method": "blacklist",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Ransom.BlueSky.B"
+                },
+                "CMC": {
+                    "method": "blacklist",
+                    "engine_name": "CMC",
+                    "engine_version": "2.4.2022.1",
+                    "engine_update": "20240819",
+                    "category": "undetected",
+                    "result": null
+                },
+                "CAT-QuickHeal": {
+                    "method": "blacklist",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "22.00",
+                    "engine_update": "20240819",
+                    "category": "malicious",
+                    "result": "Ransom.Bluesky.S28306275"
+                },
+                "Skyhigh": {
+                    "method": "blacklist",
+                    "engine_name": "Skyhigh",
+                    "engine_version": "v2021.2.0+4045",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "RDN/Ransom"
+                },
+                "ALYac": {
+                    "method": "blacklist",
+                    "engine_name": "ALYac",
+                    "engine_version": "2.0.0.10",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Ransom.Filecoder"
+                },
+                "Malwarebytes": {
+                    "method": "blacklist",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.5.5.54",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Malware.AI.4191927317"
+                },
+                "Zillya": {
+                    "method": "blacklist",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.5176",
+                    "engine_update": "20240819",
+                    "category": "malicious",
+                    "result": "Trojan.Encoder.Win32.3070"
+                },
+                "Sangfor": {
+                    "method": "blacklist",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.25.10.0",
+                    "engine_update": "20240806",
+                    "category": "malicious",
+                    "result": "Ransom.Win32.Bluesky.V1ec"
+                },
+                "K7AntiVirus": {
+                    "method": "blacklist",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.183.52993",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan ( 00597f0f1 )"
+                },
+                "Alibaba": {
+                    "method": "blacklist",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "engine_update": "20190527",
+                    "category": "malicious",
+                    "result": "Malware:Win32/km_2d26d.None"
+                },
+                "K7GW": {
+                    "method": "blacklist",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.183.52993",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Riskware ( 00584baa1 )"
+                },
+                "Cybereason": {
+                    "method": "blacklist",
+                    "engine_name": "Cybereason",
+                    "engine_version": "1.2.449",
+                    "engine_update": "20240818",
+                    "category": "malicious",
+                    "result": "malicious.ed34b5"
+                },
+                "huorong": {
+                    "method": "blacklist",
+                    "engine_name": "huorong",
+                    "engine_version": "2cf87de:2cf87de:996c2cb:996c2cb",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Ransom/LockFile.kg"
+                },
+                "BitDefenderTheta": {
+                    "method": "blacklist",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "engine_update": "20240816",
+                    "category": "malicious",
+                    "result": "AI:Packer.FE4668891E"
+                },
+                "VirIT": {
+                    "method": "blacklist",
+                    "engine_name": "VirIT",
+                    "engine_version": "9.5.769",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Win32.Genus.VTF"
+                },
+                "Symantec": {
+                    "method": "blacklist",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.22.0.0",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Ransom.Bluesky"
+                },
+                "Elastic": {
+                    "method": "blacklist",
+                    "engine_name": "Elastic",
+                    "engine_version": "4.0.158",
+                    "engine_update": "20240802",
+                    "category": "malicious",
+                    "result": "Windows.Ransomware.Conti"
+                },
+                "ESET-NOD32": {
+                    "method": "blacklist",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "29755",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "a variant of Win32/Filecoder.OLQ"
+                },
+                "APEX": {
+                    "method": "blacklist",
+                    "engine_name": "APEX",
+                    "engine_version": "6.565",
+                    "engine_update": "20240819",
+                    "category": "malicious",
+                    "result": "Malicious"
+                },
+                "TrendMicro-HouseCall": {
+                    "method": "blacklist",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Ransom.Win32.CONTI.YXCF3Z"
+                },
+                "Paloalto": {
+                    "method": "blacklist",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "generic.ml"
+                },
+                "ClamAV": {
+                    "method": "blacklist",
+                    "engine_name": "ClamAV",
+                    "engine_version": "1.4.0.0",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Win.Ransomware.Bluesky-9980052-0"
+                },
+                "Kaspersky": {
+                    "method": "blacklist",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "22.0.1.28",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan-Ransom.Win32.BlueSky.e"
+                },
+                "BitDefender": {
+                    "method": "blacklist",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Ransom.BlueSky.B"
+                },
+                "NANO-Antivirus": {
+                    "method": "blacklist",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25796",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Win32.Encoder.jppkwo"
+                },
+                "SUPERAntiSpyware": {
+                    "method": "blacklist",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "engine_update": "20240819",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Avast": {
+                    "method": "blacklist",
+                    "engine_name": "Avast",
+                    "engine_version": "23.9.8494.0",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Win32:RansomX-gen [Ransom]"
+                },
+                "Tencent": {
+                    "method": "blacklist",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan-Ransom.Win32.BlueSky.ha"
+                },
+                "TACHYON": {
+                    "method": "blacklist",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2024-08-20.02",
+                    "engine_update": "20240820",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Emsisoft": {
+                    "method": "blacklist",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2024.1.0.53752",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Ransom.BlueSky.B (B)"
+                },
+                "Google": {
+                    "method": "blacklist",
+                    "engine_name": "Google",
+                    "engine_version": "1724173227",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Detected"
+                },
+                "F-Secure": {
+                    "method": "blacklist",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.1547.307",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.TR/Crypt.XPACK.Gen"
+                },
+                "Baidu": {
+                    "method": "blacklist",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "engine_update": "20190318",
+                    "category": "undetected",
+                    "result": null
+                },
+                "VIPRE": {
+                    "method": "blacklist",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Ransom.BlueSky.B"
+                },
+                "TrendMicro": {
+                    "method": "blacklist",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Ransom.Win32.CONTI.YXCF3Z"
+                },
+                "McAfeeD": {
+                    "method": "blacklist",
+                    "engine_name": "McAfeeD",
+                    "engine_version": "1.2.0.7977",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "ti!3E035F2D7D30"
+                },
+                "Trapmine": {
+                    "method": "blacklist",
+                    "engine_name": "Trapmine",
+                    "engine_version": "4.0.16.173",
+                    "engine_update": "20240712",
+                    "category": "malicious",
+                    "result": "malicious.high.ml.score"
+                },
+                "FireEye": {
+                    "method": "blacklist",
+                    "engine_name": "FireEye",
+                    "engine_version": "35.47.0.0",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Generic.mg.d8a44d2ed34b5fee"
+                },
+                "Sophos": {
+                    "method": "blacklist",
+                    "engine_name": "Sophos",
+                    "engine_version": "2.5.5.0",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Troj/Ransom-GRP"
+                },
+                "Ikarus": {
+                    "method": "blacklist",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.3.12.0",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan-Ransom.FileCrypter"
+                },
+                "Jiangmin": {
+                    "method": "blacklist",
+                    "engine_name": "Jiangmin",
+                    "engine_version": "16.0.100",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Encoder.aut"
+                },
+                "Webroot": {
+                    "method": "blacklist",
+                    "engine_name": "Webroot",
+                    "engine_version": "1.0.0.403",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "W32.Ransom.Bluesky"
+                },
+                "Varist": {
+                    "method": "blacklist",
+                    "engine_name": "Varist",
+                    "engine_version": "6.5.1.2",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "W32/Agent.CC.gen!Eldorado"
+                },
+                "Avira": {
+                    "method": "blacklist",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.20",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "TR/Crypt.XPACK.Gen"
+                },
+                "Antiy-AVL": {
+                    "method": "blacklist",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan[Ransom]/Win32.Encoder"
+                },
+                "Kingsoft": {
+                    "method": "blacklist",
+                    "engine_name": "Kingsoft",
+                    "engine_version": "None",
+                    "engine_update": "20240725",
+                    "category": "malicious",
+                    "result": "malware.kb.a.1000"
+                },
+                "Microsoft": {
+                    "method": "blacklist",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.24070.3",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Ransom:Win32/Conti.AD!MTB"
+                },
+                "Gridinsoft": {
+                    "method": "blacklist",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.185.174",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Ransom.Win32.Conti.oa!s1"
+                },
+                "Xcitium": {
+                    "method": "blacklist",
+                    "engine_name": "Xcitium",
+                    "engine_version": "36977",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Malware@#5pxa80u8rf07"
+                },
+                "Arcabit": {
+                    "method": "blacklist",
+                    "engine_name": "Arcabit",
+                    "engine_version": "2022.0.0.18",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Ransom.BlueSky.B"
+                },
+                "ViRobot": {
+                    "method": "blacklist",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Win32.Z.Lazy.72704.A"
+                },
+                "ZoneAlarm": {
+                    "method": "blacklist",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan-Ransom.Win32.BlueSky.e"
+                },
+                "GData": {
+                    "method": "blacklist",
+                    "engine_name": "GData",
+                    "engine_version": "A:25.38730B:27.37158",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Ransom.BlueSky.B"
+                },
+                "Cynet": {
+                    "method": "blacklist",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.1.1",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Malicious (score: 100)"
+                },
+                "AhnLab-V3": {
+                    "method": "blacklist",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.26.1.10507",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Ransomware/Win.Bluesky.R500579"
+                },
+                "Acronis": {
+                    "method": "blacklist",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.121",
+                    "engine_update": "20240328",
+                    "category": "undetected",
+                    "result": null
+                },
+                "McAfee": {
+                    "method": "blacklist",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "RDN/Ransom"
+                },
+                "MAX": {
+                    "method": "blacklist",
+                    "engine_name": "MAX",
+                    "engine_version": "2023.1.4.1",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "malware (ai score=100)"
+                },
+                "VBA32": {
+                    "method": "blacklist",
+                    "engine_name": "VBA32",
+                    "engine_version": "5.0.0",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "TrojanRansom.Conti"
+                },
+                "Cylance": {
+                    "method": "blacklist",
+                    "engine_name": "Cylance",
+                    "engine_version": "3.0.0.0",
+                    "engine_update": "20240815",
+                    "category": "malicious",
+                    "result": "Unsafe"
+                },
+                "Panda": {
+                    "method": "blacklist",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trj/CI.A"
+                },
+                "Zoner": {
+                    "method": "blacklist",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "engine_update": "20240820",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Rising": {
+                    "method": "blacklist",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Ransom.Conti!1.DF1E (CLASSIC)"
+                },
+                "Yandex": {
+                    "method": "blacklist",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Encoder!v8IUSsRzukw"
+                },
+                "SentinelOne": {
+                    "method": "blacklist",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "24.2.1.1",
+                    "engine_update": "20240417",
+                    "category": "malicious",
+                    "result": "Static AI - Malicious PE"
+                },
+                "MaxSecure": {
+                    "method": "blacklist",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Trojan.Malware.274435823.susgen"
+                },
+                "Fortinet": {
+                    "method": "blacklist",
+                    "engine_name": "Fortinet",
+                    "engine_version": "None",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "W32/Filecoder.KBYJHPB!tr.ransom"
+                },
+                "AVG": {
+                    "method": "blacklist",
+                    "engine_name": "AVG",
+                    "engine_version": "23.9.8494.0",
+                    "engine_update": "20240820",
+                    "category": "malicious",
+                    "result": "Win32:RansomX-gen [Ransom]"
+                },
+                "DeepInstinct": {
+                    "method": "blacklist",
+                    "engine_name": "DeepInstinct",
+                    "engine_version": "5.0.0.8",
+                    "engine_update": "20240731",
+                    "category": "malicious",
+                    "result": "MALICIOUS"
+                },
+                "CrowdStrike": {
+                    "method": "blacklist",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "engine_update": "20231026",
+                    "category": "malicious",
+                    "result": "win/malicious_confidence_100% (W)"
+                },
+                "alibabacloud": {
+                    "method": "blacklist",
+                    "engine_name": "alibabacloud",
+                    "engine_version": "2.1.0",
+                    "engine_update": "20240801",
+                    "category": "malicious",
+                    "result": "RansomWare"
+                },
+                "Trustlook": {
+                    "method": "blacklist",
+                    "engine_name": "Trustlook",
+                    "engine_version": "1.0",
+                    "engine_update": "20240820",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "SymantecMobileInsight": {
+                    "method": "blacklist",
+                    "engine_name": "SymantecMobileInsight",
+                    "engine_version": "2.0",
+                    "engine_update": "20240103",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "BitDefenderFalx": {
+                    "method": "blacklist",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "engine_update": "20240128",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Avast-Mobile": {
+                    "method": "blacklist",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "240820-02",
+                    "engine_update": "20240820",
+                    "category": "type-unsupported",
+                    "result": null
+                }
+            },
+            "reputation": -226,
+            "type_tags": [
+                "executable",
+                "windows",
+                "win32",
+                "pe",
+                "peexe"
+            ],
+            "meaningful_name": "javaw.exe",
+            "sandbox_verdicts": {
+                "VMRay": {
+                    "category": "malicious",
+                    "sandbox_name": "VMRay",
+                    "malware_classification": [
+                        "MALWARE",
+                        "RANSOM"
+                    ]
+                },
+                "C2AE": {
+                    "category": "malicious",
+                    "confidence": 50,
+                    "sandbox_name": "C2AE",
+                    "malware_classification": [
+                        "RANSOM"
+                    ],
+                    "malware_names": [
+                        "Conti"
+                    ]
+                },
+                "DAS-Security Orcas": {
+                    "category": "malicious",
+                    "sandbox_name": "DAS-Security Orcas",
+                    "malware_classification": [
+                        "MALWARE"
+                    ]
+                },
+                "Zenbox": {
+                    "category": "malicious",
+                    "malware_classification": [
+                        "MALWARE",
+                        "RANSOM",
+                        "EVADER"
+                    ],
+                    "sandbox_name": "Zenbox",
+                    "malware_names": [
+                        "BlueSky"
+                    ],
+                    "confidence": 84
+                },
+                "Yomi Hunter": {
+                    "category": "malicious",
+                    "sandbox_name": "Yomi Hunter",
+                    "malware_classification": [
+                        "MALWARE"
+                    ]
+                },
+                "SecneurX": {
+                    "category": "malicious",
+                    "malware_classification": [
+                        "RANSOM"
+                    ],
+                    "sandbox_name": "SecneurX"
+                },
+                "CAPE Sandbox": {
+                    "category": "malicious",
+                    "malware_classification": [
+                        "MALWARE"
+                    ],
+                    "sandbox_name": "CAPE Sandbox",
+                    "malware_names": [
+                        "Conti"
+                    ]
+                }
+            },
+            "pe_info": {
+                "timestamp": 3632400331,
+                "machine_type": 332,
+                "entry_point": 59520,
+                "sections": [
+                    {
+                        "name": ".text",
+                        "chi2": 399545.56,
+                        "virtual_address": 4096,
+                        "entropy": 6.54,
+                        "raw_size": 67584,
+                        "flags": "rx",
+                        "virtual_size": 67374,
+                        "md5": "c30ec82ec7116566cc8c3ac1e1d31ee8"
+                    },
+                    {
+                        "name": ".data",
+                        "chi2": 5301.69,
+                        "virtual_address": 73728,
+                        "entropy": 7.67,
+                        "raw_size": 3072,
+                        "flags": "rw",
+                        "virtual_size": 5736,
+                        "md5": "885cdc5a270a2c91877f8af9cd6875cb"
+                    },
+                    {
+                        "name": ".reloc",
+                        "chi2": 28191.0,
+                        "virtual_address": 81920,
+                        "entropy": 5.36,
+                        "raw_size": 1024,
+                        "flags": "r",
+                        "virtual_size": 792,
+                        "md5": "0a3b0120639f7e4faa0df550d3113564"
+                    }
+                ]
+            },
+            "sha1": "d8369cb0d8ccec95b2a49ba34aa7749b60998661",
+            "tags": [
+                "detect-debug-environment",
+                "checks-user-input",
+                "checks-cpu-name",
+                "direct-cpu-clock-access",
+                "long-sleeps",
+                "peexe",
+                "runtime-modules"
+            ],
+            "times_submitted": 443,
+            "type_tag": "peexe",
+            "last_submission_date": 1724178824,
+            "vhash": "0740366d755\"z",
+            "authentihash": "e5dccc52522116a7f12acbd0af887e3caceabb160b5ef24630d63e83b8beeb45",
+            "ssdeep": "1536:G+5geBR2Q+a8M124Zl2i5SADBDg8trv4t9MBY5y+v:GDeBgQ+a8M12Y2i59hrvWMBCv",
+            "last_analysis_stats": {
+                "malicious": 68,
+                "suspicious": 0,
+                "undetected": 7,
+                "harmless": 0,
+                "timeout": 0,
+                "confirmed-timeout": 0,
+                "failure": 0,
+                "type-unsupported": 4
+            },
+            "md5": "d8a44d2ed34b5fee7c8e24d998f805d9",
+            "last_modification_date": 1724178926,
+            "popular_threat_classification": {
+                "popular_threat_category": [
+                    {
+                        "count": 32,
+                        "value": "ransomware"
+                    },
+                    {
+                        "count": 24,
+                        "value": "trojan"
+                    }
+                ],
+                "suggested_threat_label": "ransomware.bluesky/conti",
+                "popular_threat_name": [
+                    {
+                        "count": 16,
+                        "value": "bluesky"
+                    },
+                    {
+                        "count": 7,
+                        "value": "conti"
+                    },
+                    {
+                        "count": 6,
+                        "value": "encoder"
+                    }
+                ]
+            },
+            "unique_sources": 350,
+            "type_description": "Win32 EXE",
+            "names": [
+                "javaw.exe",
+                "malware.exe",
+                "3e035f2d7d30869ce53171ef5a0f761bfb9c14d94d9fe6da385e20b8d96dc2fb.exe",
+                "javaw.exe$",
+                "javaw.bin",
+                "javaw.exe (2)",
+                "javaw[8].exe",
+                "javaw.exe (3)",
+                "javaw_DONOTRUN.bin",
+                "javaw",
+                "javaw 2.exe",
+                "mz",
+                "asdf",
+                "javaw.exe.bin",
+                "Unconfirmed 142962.crdownload",
+                "Ransom BlueSky_1.sample",
+                "3e035f2d.exe",
+                "3e035f2d7d30869ce53171ef5a0f761bfb9c14d94d9fe6da385e20b8d96dc2fb.bin.sample",
+                "d8a44d2ed34b5fee7c8e24d998f805d9.virus",
+                "bsky1_unknown.exe",
+                "unknown",
+                "3e035f2d7d30869ce53171ef5a0f761bfb9c14d94d9fe6da385e20b8d96dc2fb.bin",
+                "l.exe"
+            ],
+            "sigma_analysis_summary": {
+                "Sigma Integrated Rule Set (GitHub)": {
+                    "high": 1,
+                    "medium": 0,
+                    "critical": 0,
+                    "low": 3
+                }
+            },
+            "magika": "PEBIN",
+            "trid": [
+                {
+                    "file_type": "Win32 Executable (generic)",
+                    "probability": 35.7
+                },
+                {
+                    "file_type": "Windows Icons Library (generic)",
+                    "probability": 16.3
+                },
+                {
+                    "file_type": "OS/2 Executable (generic)",
+                    "probability": 16.1
+                },
+                {
+                    "file_type": "Generic Win/DOS Executable",
+                    "probability": 15.8
+                },
+                {
+                    "file_type": "DOS Executable Generic",
+                    "probability": 15.8
+                }
+            ],
+            "last_analysis_date": 1724178824,
+            "sha256": "3e035f2d7d30869ce53171ef5a0f761bfb9c14d94d9fe6da385e20b8d96dc2fb",
+            "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+            "sigma_analysis_results": [
+                {
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "3",
+                                "ProcessId": "1820",
+                                "DestinationPortName": "-",
+                                "Protocol": "udp",
+                                "Initiated": "true",
+                                "DestinationIp": "255.255.255.255",
+                                "SourcePortName": "-",
+                                "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
+                                "RuleName": "Usermode",
+                                "DestinationHostname": "-",
+                                "UtcTime": "2022-06-27 16:12:43.982",
+                                "User": "work\\admin",
+                                "DestinationPort": "12345",
+                                "ProcessGuid": "5240FBE6-D6EE-62B9-3B00-000000002400",
+                                "SourcePort": "64232",
+                                "SourceIsIpv6": "false",
+                                "SourceHostname": "-",
+                                "SourceIp": "192.168.122.246",
+                                "DestinationIsIpv6": "false"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "3",
+                                "ProcessId": "1820",
+                                "DestinationPortName": "-",
+                                "SourceIsIpv6": "false",
+                                "DestinationIp": "255.255.255.255",
+                                "Initiated": "true",
+                                "SourcePortName": "-",
+                                "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
+                                "RuleName": "Usermode",
+                                "DestinationHostname": "-",
+                                "UtcTime": "2022-06-27 16:12:43.982",
+                                "User": "work\\admin",
+                                "DestinationPort": "12345",
+                                "ProcessGuid": "5240FBE6-D6EE-62B9-3B00-000000002400",
+                                "SourcePort": "64232",
+                                "Protocol": "udp",
+                                "SourceHostname": "-",
+                                "SourceIp": "192.168.122.246",
+                                "DestinationIsIpv6": "false"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_description": "Adversaries may attempt to get a listing of services running on remote hosts, including those that may be vulnerable to remote software exploitation",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "rule_title": "Python Initiated Connection",
+                    "rule_id": "e4d5f1be0673fa786cc8379c15338af08cdd11eed433bead9e801d6204d42a2d",
+                    "rule_author": "frack113"
+                },
+                {
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "5038",
+                                "param1": "\\Device\\HarddiskVolume4\\Program Files (x86)\\sandbox\\driver\\sandbox-driver.sys"
+                            }
+                        }
+                    ],
+                    "rule_level": "low",
+                    "rule_description": "Code integrity failures may indicate tampered executables.",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "rule_title": "Failed Code Integrity Checks",
+                    "rule_id": "134564d292d785dff102940b8a1ee06dba2d462c5fb852124b3771a49d7885f1",
+                    "rule_author": "Thomas Patzke"
+                },
+                {
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "1820",
+                                "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
+                                "ProcessGuid": "5240FBE6-D6EE-62B9-3B00-000000002400",
+                                "CreationUtcTime": "2022-06-27 16:12:50.812",
+                                "UtcTime": "2022-06-27 16:12:50.812",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\admin\\AppData\\Local\\Temp\\frida-1847a5a11f0f9b3155ea1f89316c8b1d\\frida-winjector-helper-32.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "1820",
+                                "Image": "C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python37\\pythonw.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "2022-06-27 16:12:51.953",
+                                "UtcTime": "2022-06-27 16:12:51.968",
+                                "ProcessGuid": "5240FBE6-D6EE-62B9-3B00-000000002400",
+                                "TargetFilename": "C:\\Users\\admin\\AppData\\Local\\Temp\\frida-1847a5a11f0f9b3155ea1f89316c8b1d\\frida-winjector-helper-64.exe"
+                            }
+                        }
+                    ],
+                    "rule_level": "low",
+                    "rule_description": "Detects the creation of an executable by another executable",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "rule_title": "Creation of an Executable by an Executable",
+                    "rule_id": "b5386a23355681c43cfbd2f2ccfe4b16ed45324d0d7b5583487a9f302ee1e427",
+                    "rule_author": "frack113"
+                },
+                {
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "4104",
+                                "ScriptBlockId": "42e47a80-99fa-4f09-a2fa-d3e4a7512405",
+                                "ScriptBlockText": ")\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 5 -characters 'ABCDEFGHKLMNOPRSTUVWXYZabcdefghklmnoprstuvwxyz123456789'\r\n\t\t\t$newClass.Properties.Add($pr.Name, $value, $pr.Type)\r\n\t\t} elseif($pr.Name -eq \"OEMStringArray\")\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 10 -characters 'ABCDEFGHKLMNOPRSTUVWXYZabcdefghklmnoprstuvwxyz123456789'\r\n\t\t\t$newClass.Properties.Add($pr.Name, @($value), $pr.Type)\r\n\t\t} else\r\n\t\t{\r\n\t\t\t$newClass.Properties.Add($pr.Name, $pr.Value, $pr.Type)\r\n\t\t}\r\n\t}\r\n}\r\n\r\n$newClass.Put()\r\nSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_ComputerSystem \r\n\r\n#Joebox\r\n\r\n#Creating Win32_PnPEntity fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_PnPEntity\";\r\n$newClass.Qualifiers.Add(\"Static\", $true);\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_PnPEntity\"\r\n\r\nforeach ($pr in $objWmi[0].Properties)\r\n{\r\n\t$newClass.Properties.Add($pr.Name, $pr.Type, $false)\t\r\n\tif($pr.Name -eq \"DeviceID\")\r\n\t{\r\n\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t}\r\n\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"read\", $true)\r\n}\r\n\r\n$newClass.Put()\r\n\r\nforeach ($obj in $objWmi)\r\n{\t\r\n\t$args = @{}\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\t\r\n\t\tif(($pr.Name -eq \"DeviceId\" -or $pr.Name -eq \"Caption\" -or $pr.Name -eq \"Name\" -or $pr.Name -eq \"PNPDeviceID\"  -or $pr.Name -eq \"Service\") -and ($pr.Value -match 'VEN_80EE' -or $pr.Value -match 'VEN_15AD' -or $pr.Value -match 'VBOX' -or $pr.Value -match 'VBox' -or $pr.Value -match 'VMWARE' -or $pr.Value -match '82801FB' -or $pr.Value -match '82441FX' -or $pr.Value -match '82371SB' -or $pr.Value -match 'OpenHCD'))\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 8 -characters 'ABCDEFGHKLMNOPRSTUVWXYZ123456789_'\r\n\t\t\t$value = $pr.Value.replace(\"VEN_80EE\", $value).replace(\"VEN_15AD\", $value).replace(\"VBOX\", $value).replace(\"VBox\", $value).replace(\"VMWARE\", $value).replace(\"82801FB\", $value).replace(\"82441FX\", $value).replace(\"82371SB\", $value).replace(\"OpenHCD\", $value)\r\n\t\t\t\r\n\t\t\t# 82801FB 82441FX 82371SB OpenHCD\r\n\t\t\t\t\r\n\t\t\t$args.add($pr.Name, $value)\r\n\t\t\t\r\n\t\t} else\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, $pr.Value)\r\n\t\t}\r\n\t}\r\n\t\r\n\tSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_PnPEntity -Arguments $args\r\n}\r\n\r\n#Joebox\r\n\r\n#Creating Win32_DiskDrive fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_DiskDrive\";\r\n$newClass.Qualifiers.Add(\"Static\", $true);\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_DiskDrive\"\r\n\r\nif(-Not ($objWMi -is [array]))\r\n{\r\n\t$objWMi = @($objWMi)\r\n}\r\n\r\nforeach ($pr in $objWmi[0].Properties)\r\n{\r\n\t$newClass.Properties.Add($pr.Name, $pr.Type, $false)\t\r\n\tif($pr.Name -eq \"DeviceID\")\r\n\t{\r\n\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t}\r\n\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"read\", $true)\r\n}\r\n\r\n$newClass.Put()\r\n\r\nforeach ($obj in $objWmi)\r\n{\t\r\n\t$args = @{}\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\t\r\n\t\tif(($pr.Name -eq \"DeviceId\" -or $pr.Name -eq \"Caption\" -or $pr.Name -eq \"Model\" -or $pr.Name -eq \"PNPDeviceID\") -and ($pr.Value -match 'VBOX' -or $pr.Value -match 'VBox' -or $pr.Value -match 'VMWARE' -or $pr.Value -match 'VMware'))\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 8 -characters 'ABCDEFGHKLMNOPRSTUVWXYZ123456789_'\r\n\t\t\t$value = $pr.Value.replace(\"VBOX\", $value).replace(\"VBox\", $value).replace(\"VMWARE\", $value).replace(\"VMware Virtual disk\", $value).replace(\"VMware\", $value).replace(\"HARDDISK\", \"WDC\").replace(\"VIRTUAL_DISK\", $value)\r\n\t\t\t\t\r\n\t\t\t$args.add($pr.Name, $value)\r\n\t\t\r\n\t\t# Change disk size\r\n\t\t} elseif($pr.Name -eq \"Size\" -and $pr.Value -lt 200000000000)\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, 412300001200)\r\n\t\t} elseif(-Not($pr.Name -eq \"Capabilities\"))\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, $pr.Value)\r\n\t\t}\r\n\t}\r\n\t\r\n\tSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_DiskDrive -Arguments $args\r\n}\r\n\r\n#Joebox\r\n\r\n#Creating Win32_VideoController fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_VideoController\";\r\n$newClass.Qualifiers.Add(\"Static\", $true);\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_VideoController\"\r\n\r\nif(-Not ($objWMi -is [array]))\r\n{\r\n\t$objWMi = @($objWMi)\r\n}\r\n\r\nforeach ($pr in $objWmi[0].Properties)\r\n{\r\n\t$newClass.Properties.Add($pr.Name, $pr.Type, $false)\t\r\n\tif($pr.Name -eq \"DeviceID\")\r\n\t{\r\n\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t}\r\n\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"read\", $true)\r\n}\r\n\r\n$newClass.Put()\r\n\r\nforeach ($obj in $objWmi)\r\n{\t\r\n\t$args = @{}\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\t\r\n\t\tif(($pr.Name -eq \"Caption\" -or $pr.Name -eq \"Name\" -or $pr.Name -eq \"PNPDeviceID\" -or $pr.Name -eq \"AdapterCompatibility\" -or $pr.Name -eq \"Description\" -or $pr.Name -eq \"InfSection\" -or $pr.Name -eq \"VideoProcessor\") -and ($pr.Value -match 'VBOX' -or $pr.Value -match 'VBox' -or $pr.Value -match 'VMWARE' -or $pr.Value -match 'VirtualBox' -or $pr.Value -match 'VMware' -or $pr.Value -match 'Oracle Corporation' -or $pr.Value -match 'Microsoft Basic Display Adapter'))\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 8 -characters 'ABCDEFGHKLMNOPRSTUVWXYZ123456789_'\r\n\t\t\t$value = $pr.Value.replace(\"VBOX\", $value).replace(\"VBox\", $value).replace(\"VMWARE\", $value).replace(\"VMware\", $value).replace(\"VirtualBox\", $value).replace(\"Oracle Corporation\", $value).replace(\"Microsoft Basic Display Adapter\", $value)\r\n\t\t\t\t\r\n\t\t\t$args.add($pr.Name, $value)\r\n\t\t\r\n\r\n\t\t} elseif($pr.Name -eq \"DriverVersion\")\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 8 -characters '1234567890.'\r\n\t\t\t$args.add($pr.Name, $value)\r\n\t\t} elseif($pr.Name -eq \"AdapterRAM\" -and $pr.Value -lt 1000000000)\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, 1073741824)\r\n\t\t} else\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, $pr.Value)\r\n\t\t}\r\n\t}\r\n\t\r\n\tSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_VideoController -Arguments $args\r\n}\r\n\r\n#Joebox\r\n\r\n#Creating Win32_BaseBoard fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_BaseBoard\";\r\n$newClass.Qualifiers.Add(\"Static\", $true)\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_BaseBoard\"\r\n\r\nforeach ($obj in $objWmi)\r\n{\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\r\n\t\tif($pr.Name -eq \"Name\")\r\n\t\t{\t$value = Get-RandomCharacters -length 10 -characters 'ABCDEFGHKLMNOPRSTUVWXYZ123456789'\r\n\r\n\t\t\t$newClass.Properties.Add($pr.Name, $value, $pr.Type)\r\n\t\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t\t} elseif($pr.Name -eq \"Product\" -or $pr.Name -eq \"Manufacturer\")\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 10 -characters 'ABCDEFGHKLMNOPRSTUVWXYZ123456789'\r\n\t\t\t$newClass.Properties.Add($pr.Name, $value, $pr.Type)\r\n\t\t} else\r\n\t\t{\r\n\t\t\t$newClass.Properties.Add($pr.Name, $pr.Value, $pr.Type)\r\n\t\t}\r\n\t}\r\n}\r\n\r\n$newClass.Put()\r\nSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_BaseBoard\r\n\r\n\r\n#Creating Win32_ComputerSystemProduct fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_ComputerSystemProduct\";\r\n$newClass.Qualifiers.Add(\"Static\", $true)\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_ComputerSystemProduct\"\r\n\r\nforeach ($obj in $objWmi)\r\n{\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\r\n\t\tif($pr.Name -eq \"Name\")\r\n\t\t{\t\r\n\t\t\t$newClass.Properties.Add($pr.Name, $pr.$value, $pr.Type)\r\n\t\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t\t} elseif($pr.Name -eq \"IdentifyingNumber\")\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 6 -characters 'ABCDEFGHKLMNOPRSTUVWXYZ123456789'\r\n\t\t\t$newClass.Properties.Add($pr.Name, $value, $pr.Type)\r\n\t\t} else\r\n\t\t{\r\n\t\t\t$newClass.Properties.Add($pr.Name, $pr.Value, $pr.Type)\r\n\t\t}\r\n\t}\r\n}\r\n\r\n$newClass.Put()\r\nSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_ComputerSystemProduct\r\n\r\n\r\n\r\n#Creating Win32_LogicalDisk fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_LogicalDisk\";\r\n$newClass.Qualifiers.Add(\"Static\", $true);\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_LogicalDisk WHERE DriveType = 3\"\r\n\r\nif(-Not ($objWMi -is [array]))\r\n{\r\n\t$objWMi = @($objWMi)\r\n}\r\n\r\nforeach ($pr in $objWmi[0].Properties)\r\n{\r\n\t$newClass.Properties.Add($pr.Name, $pr.Type, $false)\t\r\n\tif($pr.Name -eq \"DeviceID\")\r\n\t{\r\n\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t}\r\n\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"read\", $true)\r\n}\r\n\r\n$newClass.Put()\r\n\r\nforeach ($obj in $objWmi)\r\n{\t\r\n\t$args = @{}\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\t\r\n\t\tif($pr.Name -eq \"Size\")\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, \"223496729601\")\r\n\t\t} else\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, $pr.Value)\r\n\t\t}\r\n\t}\r\n\t\r\n\tSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_LogicalDisk -Arguments $args\r\n}\r\n\r\n\r\n#Creating Win32_ComputerSystemProduct fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_OperatingSystem\";\r\n$newClass.Qualifiers.Add(\"Static\", $true)\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_OperatingSystem\"\r\n\r\n\r\nforeach ($obj in $objWmi)\r\n{\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\r\n\t\tif($pr.Name -eq \"CreationClassName\")\r\n\t\t{\t\r\n\t\t\t$newClass.Properties.Add($pr.Name, $pr.$value, $pr.Type)\r\n\t\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t\t} elseif($pr.Name -eq \"LastBootUpTime\")\r\n\t\t{\r\n\t\t\t$d = [System.Management.ManagementDateTimeConverter]::ToDateTime($pr.Value)\r\n\t\t\t$d = $d.addDays(-10)\r\n\t\t\t$d = [System.Management.ManagementDateTimeConverter]::ToDmtfDateTime($d)\r\n\t\t\t\r\n\t\t\t$newClass.Properties.Add($pr.Name, $d, $pr.Type)\r\n\t\t\t\r\n\t\t} else\r\n\t\t{\r\n\t\t\t$newClass.Properties.Add($pr.Name, $pr.Value, $pr.Type)\r\n\t\t}\r\n\t}\r\n}\r\n\r\n$newClass.Put()\r\nSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_OperatingSystem\r\n\r\n\r\nfunction Delete() {\r\n    $Invocation = (Get-Variable MyInvocation -Scope 1).Value\r\n    $Path =  $Invocation.MyCommand.Path \r\n    Write-Host $Path\r\n    Remove-Item $Path -force\r\n} \r\n     \r\nDelete \r\n",
+                                "MessageNumber": "\u0002",
+                                "MessageTotal": "\u0002",
+                                "Path": "C:\\Program Files (x86)\\Joebox\\unpack\\wmievasions.ps1"
+                            }
+                        }
+                    ],
+                    "rule_level": "low",
+                    "rule_description": "Powershell Remove-Item  with -Path to delete a file or a folder with \"-Recurse\"",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "rule_title": "Use Remove-Item to Delete File",
+                    "rule_id": "d9b2eb00753c3049fbb4ed4f7d88f29b65a0c50bec45ff4723b95bb637f8f83d",
+                    "rule_author": "frack113"
+                }
+            ],
+            "size": 72704,
+            "first_submission_date": 1656347718
+        }
+    }
+}
