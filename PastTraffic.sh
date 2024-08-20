@@ -8,20 +8,21 @@ fi
 
 # File paths
 file="$1"
-export_dir="/home/kota/Frog-Master/Files/"
-results_file="analysis_results.txt"
+export_dir="./files"  
+
 api_key="1579c2e194f3e92a6670aaf26dd446bd7e2559d832d59057b233a72d09ad5b4b"
 
 # Set permissions for the file
 chmod 777 "$file"
 
-# Remove the export directory if it exists and create a new one
+# Ensure the export directory exists and is empty
 if [ -d "$export_dir" ]; then
-    echo "Export directory $export_dir exists. Removing it..."
-    rm -rf "$export_dir"
+    echo "Emptying folder: $export_dir"
+    rm -rf "$export_dir"/*
+else
+    echo "Creating folder: $export_dir"
+    mkdir "$export_dir"
 fi
-echo "Creating export directory $export_dir..."
-mkdir -p "$export_dir"
 
 # List of protocols to extract
 protocols=("http" "smb" "imf" "tftp" "ftp-data" "dicom")
@@ -35,28 +36,24 @@ for protocol in "${protocols[@]}"; do
     fi
 done
 
-echo "Traffic capture and export complete."
+# Remove duplicate files by comparing base filenames and suffixes
+echo "Removing duplicate files..."
 
-# Initialize results file
-echo "VirusTotal Analysis Results" > "$results_file"
-echo "---------------------------" >> "$results_file"
-
-# Analyze files with VirusTotal
-for file_path in "$export_dir"*; do
-    if [ -f "$file_path" ]; then
-        # Compute the MD5 hash of the file content
-        file_hash=$(md5sum "$file_path" | awk '{print $1}')
-        
-        # Query VirusTotal
-        response=$(curl -s --request GET \
-            --url "https://www.virustotal.com/api/v3/files/$file_hash" \
-            --header "x-apikey: $api_key")
-
-        # Write the response to results file
-        echo "Results for $(basename "$file_path"):" >> "$results_file"
-        echo "$response" >> "$results_file"
-        echo "-----------------------------------" >> "$results_file"
+for file in "$export_dir"/*; do
+    # Extract the base name of the file (e.g., 'del.ps1' from 'del(1).ps1')
+    base_name=$(echo "$(basename "$file")" | sed 's/([0-9])//g')
+    base_path="$export_dir/$base_name"
+    
+    # If a file with the base name already exists, remove the current file
+    if [ -f "$base_path" ] && [ "$file" != "$base_path" ]; then
+        echo "Removing duplicate file: $file"
+        rm -v "$file"
+    else
+        # Rename the current file to its base name if it's not already done
+        if [ "$file" != "$base_path" ]; then
+            mv -v "$file" "$base_path"
+        fi
     fi
 done
 
-echo "VirusTotal analysis complete. Results saved to $results_file."
+echo "Duplicate removal complete."

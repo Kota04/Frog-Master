@@ -49,29 +49,8 @@ Results for extracted_hosts(1).txt:
             "self": "https://www.virustotal.com/api/v3/files/8069cd67cc32c1ede26813777e749259137b983816c70aa8f28c77e203b20593"
         },
         "attributes": {
-            "names": [
-                "extracted_hosts.txt"
-            ],
-            "tags": [
-                "text"
-            ],
-            "reputation": 0,
             "sha1": "62e8b42adba6b1537e782c0d0527edcc8ad8dc0d",
-            "last_analysis_date": 1721318064,
-            "times_submitted": 1,
-            "type_extension": "txt",
-            "last_analysis_stats": {
-                "malicious": 0,
-                "suspicious": 0,
-                "undetected": 64,
-                "harmless": 0,
-                "timeout": 0,
-                "confirmed-timeout": 0,
-                "failure": 0,
-                "type-unsupported": 14
-            },
-            "meaningful_name": "extracted_hosts.txt",
-            "magic": "ASCII text",
+            "reputation": 0,
             "last_analysis_results": {
                 "Bkav": {
                     "method": "blacklist",
@@ -698,25 +677,46 @@ Results for extracted_hosts(1).txt:
                     "result": null
                 }
             },
-            "last_modification_date": 1721325335,
-            "last_submission_date": 1721318064,
-            "type_tag": "text",
-            "first_submission_date": 1721318064,
-            "md5": "540a50324d91b9c75be4cfc0da660e1f",
-            "tlsh": "T1F1A0092410C800340E82228085187AAC2806002740D4A1F28233A0BCC80A090802EA22",
-            "unique_sources": 1,
+            "last_analysis_date": 1721318064,
             "ssdeep": "3:F4cCSUvtj4cCSQv4WRv4cCdF1v4cCd2n:F4cRUvF4cRQvb54cav4cbn",
-            "size": 72,
-            "type_tags": [
-                "text"
-            ],
-            "magika": "YAML",
             "sha256": "8069cd67cc32c1ede26813777e749259137b983816c70aa8f28c77e203b20593",
+            "type_tag": "text",
             "type_description": "Text",
+            "magic": "ASCII text",
+            "meaningful_name": "extracted_hosts.txt",
             "total_votes": {
                 "harmless": 0,
                 "malicious": 0
-            }
+            },
+            "md5": "540a50324d91b9c75be4cfc0da660e1f",
+            "names": [
+                "extracted_hosts.txt"
+            ],
+            "type_extension": "txt",
+            "last_modification_date": 1721325335,
+            "type_tags": [
+                "text"
+            ],
+            "size": 72,
+            "last_analysis_stats": {
+                "malicious": 0,
+                "suspicious": 0,
+                "undetected": 64,
+                "harmless": 0,
+                "timeout": 0,
+                "confirmed-timeout": 0,
+                "failure": 0,
+                "type-unsupported": 14
+            },
+            "first_submission_date": 1721318064,
+            "unique_sources": 1,
+            "tags": [
+                "text"
+            ],
+            "last_submission_date": 1721318064,
+            "times_submitted": 1,
+            "tlsh": "T1F1A0092410C800340E82228085187AAC2806002740D4A1F28233A0BCC80A090802EA22",
+            "magika": "YAML"
         }
     }
 }
@@ -730,20 +730,48 @@ Results for extracted_hosts.txt:
             "self": "https://www.virustotal.com/api/v3/files/8069cd67cc32c1ede26813777e749259137b983816c70aa8f28c77e203b20593"
         },
         "attributes": {
-            "md5": "540a50324d91b9c75be4cfc0da660e1f",
-            "sha1": "62e8b42adba6b1537e782c0d0527edcc8ad8dc0d",
-            "tags": [
-                "text"
-            ],
-            "type_description": "Text",
-            "type_tag": "text",
-            "first_submission_date": 1721318064,
-            "last_submission_date": 1721318064,
             "type_tags": [
                 "text"
             ],
-            "last_modification_date": 1721325335,
+            "sha256": "8069cd67cc32c1ede26813777e749259137b983816c70aa8f28c77e203b20593",
+            "names": [
+                "extracted_hosts.txt"
+            ],
+            "total_votes": {
+                "harmless": 0,
+                "malicious": 0
+            },
+            "reputation": 0,
+            "sha1": "62e8b42adba6b1537e782c0d0527edcc8ad8dc0d",
+            "type_tag": "text",
+            "tags": [
+                "text"
+            ],
+            "times_submitted": 1,
+            "meaningful_name": "extracted_hosts.txt",
+            "last_analysis_date": 1721318064,
             "magic": "ASCII text",
+            "first_submission_date": 1721318064,
+            "last_analysis_stats": {
+                "malicious": 0,
+                "suspicious": 0,
+                "undetected": 64,
+                "harmless": 0,
+                "timeout": 0,
+                "confirmed-timeout": 0,
+                "failure": 0,
+                "type-unsupported": 14
+            },
+            "last_submission_date": 1721318064,
+            "magika": "YAML",
+            "unique_sources": 1,
+            "tlsh": "T1F1A0092410C800340E82228085187AAC2806002740D4A1F28233A0BCC80A090802EA22",
+            "ssdeep": "3:F4cCSUvtj4cCSQv4WRv4cCdF1v4cCd2n:F4cRUvF4cRQvb54cav4cbn",
+            "type_extension": "txt",
+            "size": 72,
+            "md5": "540a50324d91b9c75be4cfc0da660e1f",
+            "last_modification_date": 1721325335,
+            "type_description": "Text",
             "last_analysis_results": {
                 "Bkav": {
                     "method": "blacklist",
@@ -1369,35 +1397,7 @@ Results for extracted_hosts.txt:
                     "category": "type-unsupported",
                     "result": null
                 }
-            },
-            "reputation": 0,
-            "total_votes": {
-                "harmless": 0,
-                "malicious": 0
-            },
-            "names": [
-                "extracted_hosts.txt"
-            ],
-            "ssdeep": "3:F4cCSUvtj4cCSQv4WRv4cCdF1v4cCd2n:F4cRUvF4cRQvb54cav4cbn",
-            "type_extension": "txt",
-            "sha256": "8069cd67cc32c1ede26813777e749259137b983816c70aa8f28c77e203b20593",
-            "meaningful_name": "extracted_hosts.txt",
-            "magika": "YAML",
-            "size": 72,
-            "times_submitted": 1,
-            "last_analysis_stats": {
-                "malicious": 0,
-                "suspicious": 0,
-                "undetected": 64,
-                "harmless": 0,
-                "timeout": 0,
-                "confirmed-timeout": 0,
-                "failure": 0,
-                "type-unsupported": 14
-            },
-            "tlsh": "T1F1A0092410C800340E82228085187AAC2806002740D4A1F28233A0BCC80A090802EA22",
-            "unique_sources": 1,
-            "last_analysis_date": 1721318064
+            }
         }
     }
 }

@@ -5,6 +5,7 @@ class MySignup(ctk.CTkFrame):
         super().__init__(master)
         self.controller = controller
         
+        
         # Create a container for widgets
         self.container = ctk.CTkFrame(self, width=450, height=600)
         self.container.place(relx=0.5, rely=0.5, anchor="center")  # Center the container in the parent frame

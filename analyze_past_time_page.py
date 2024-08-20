@@ -2,7 +2,7 @@ import customtkinter as ctk
 from tkinter import filedialog
 import os
 import subprocess
-import requests  # You might use this if you need to make additional HTTP requests
+import requests 
 
 class AnalyzePastTimePage(ctk.CTkFrame):
     def __init__(self, parent, controller):
@@ -51,8 +51,6 @@ class AnalyzePastTimePage(ctk.CTkFrame):
                 # Handle script output
                 if result.returncode == 0:
                     self.status_label.configure(text="File processed successfully.")
-                    # Optionally, you can display the script output
-                    print(result.stdout)
                 else:
                     self.status_label.configure(text="Failed to process file.")
                     print(result.stderr)

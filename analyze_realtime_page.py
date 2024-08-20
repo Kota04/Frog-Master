@@ -93,7 +93,7 @@ class AnalyzeRealTimePage(ctk.CTkFrame):
             result = subprocess.run(['sudo', 'bash', shell_script_path, interface, filter_str],
                                     check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
             print('Success')
-            print(f"Output:\n{result.stdout}")
+            
         except subprocess.CalledProcessError as e:
             print(f"Shell script failed with exit code {e.returncode}")
             print(f"Error output:\n{e.stderr}")
