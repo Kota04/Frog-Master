@@ -5,9 +5,10 @@ import subprocess
 import requests 
 
 class AnalyzePastTimePage(ctk.CTkFrame):
-    def __init__(self, parent, controller):
+    def __init__(self, parent, controller, results_frame):
         super().__init__(parent)
         self.controller = controller
+        self.results_frame = results_frame  # Reference to the Results frame
         
         self.container = ctk.CTkFrame(self, width=400, height=300)
         self.container.place(relx=0.5, rely=0.5, anchor="center")
@@ -24,8 +25,6 @@ class AnalyzePastTimePage(ctk.CTkFrame):
         self.submit_button = ctk.CTkButton(self.container, text="Submit", command=self.submit)
         self.submit_button.place(relx=0.5, rely=0.8, anchor="center")
         
-        
-
         self.file_path = None  
 
     def upload_file(self):
@@ -41,17 +40,16 @@ class AnalyzePastTimePage(ctk.CTkFrame):
                 self.status_label.configure(text="File size exceeds 5MB.")
             else:
                 self.status_label.configure(text=f"File '{os.path.basename(self.file_path)}' uploaded successfully.")
-    def show_frame(self, page_name):
-        frame = self.frames[page_name]
-        frame.tkraise()
 
     def submit(self):
         if self.file_path:
             script_path = "./PastTraffic.sh"
             try:
-                result = subprocess.run(['sudo','bash', script_path, self.file_path], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+                result = subprocess.run(['sudo', 'bash', script_path, self.file_path], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                 if result.returncode == 0:
                     self.status_label.configure(text="File processed successfully.")
+                    self.results_frame.display_results()  # Call the display_results method
+                    self.controller.show_frame("Results")  # Switch to the Results frame
                 else:
                     self.status_label.configure(text="Failed to process file.")
                     print(result.stderr)
@@ -61,4 +59,6 @@ class AnalyzePastTimePage(ctk.CTkFrame):
                 self.status_label.configure(text=f"An error occurred: {str(e)}")
         else:
             self.status_label.configure(text="Please upload a file first.")
-        
+
+# Ensure that when you create AnalyzePastTimePage, you pass in the Results frame:
+# analyze_page = AnalyzePastTimePage(parent, controller, results_frame)

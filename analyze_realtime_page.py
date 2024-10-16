@@ -3,9 +3,10 @@ import customtkinter as ctk
 import subprocess
 
 class AnalyzeRealTimePage(ctk.CTkFrame):
-    def __init__(self, parent, controller):
+    def __init__(self, parent, controller,results_frame):
         super().__init__(parent)
         self.controller = controller
+        self.results_frame = results_frame  
         
         # Create a frame to contain all widgets
         self.container = ctk.CTkFrame(self, width=600, height=600)
@@ -92,6 +93,8 @@ class AnalyzeRealTimePage(ctk.CTkFrame):
             # Note: Ensure that the CaptureTraffic.sh script can handle the filter string argument
             result = subprocess.run(['sudo', 'bash', shell_script_path, interface, filter_str],
                                     check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            self.results_frame.display_results()  # Call the display_results method
+            self.controller.show_frame("Results")
             print('Success')
             
         except subprocess.CalledProcessError as e:

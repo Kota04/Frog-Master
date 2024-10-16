@@ -43,11 +43,18 @@ class MainContent(ctk.CTkFrame):
         self.main_content.place(relx=0.111, rely=0.08, relwidth=0.889, relheight=0.92)
 
         self.frames = {}
-        for F in (HomePage, AnalyzeRealTimePage, AnalyzePastTimePage, AnalyzePDFPage, Results):
+        
+        for F in (HomePage, Results, AnalyzeRealTimePage, AnalyzePastTimePage, AnalyzePDFPage):
             page_name = F.__name__
-            frame = F(parent=self.main_content, controller=self)
+            if F is AnalyzeRealTimePage:
+                frame = F(parent=self.main_content, controller=self,results_frame=self.frames["Results"])  # Modify as needed
+            elif F is AnalyzePastTimePage:
+                frame = F(parent=self.main_content, controller=self, results_frame=self.frames["Results"])  # Pass results_frame
+            else:
+                frame = F(parent=self.main_content, controller=self)  # Same for other pages
             self.frames[page_name] = frame
             frame.place(relx=0, rely=0, relwidth=1, relheight=1)
+
 
         self.show_frame("HomePage")
 
