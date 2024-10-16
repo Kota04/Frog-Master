@@ -3,6 +3,7 @@ from home_page import HomePage
 from analyze_realtime_page import AnalyzeRealTimePage
 from analyze_past_time_page import AnalyzePastTimePage
 from analyze_pdf_page import AnalyzePDFPage
+from results import Results
 
 class MainContent(ctk.CTkFrame):
     def __init__(self, master, controller):
@@ -34,13 +35,15 @@ class MainContent(ctk.CTkFrame):
 
         self.analyze_pdf_button = ctk.CTkButton(self.sidebar, text="Analyze PDF", command=self.show_analyze_pdf, corner_radius=0)
         self.analyze_pdf_button.place(relx=0.5, rely=0.18, anchor="center", relwidth=1, relheight=0.05)
+        self.analyze_pdf_button = ctk.CTkButton(self.sidebar, text="Results", command=self.show_results, corner_radius=0)
+        self.analyze_pdf_button.place(relx=0.5, rely=0.23, anchor="center", relwidth=1, relheight=0.05)
 
         # Main content area
         self.main_content = ctk.CTkFrame(self)
         self.main_content.place(relx=0.111, rely=0.08, relwidth=0.889, relheight=0.92)
 
         self.frames = {}
-        for F in (HomePage, AnalyzeRealTimePage, AnalyzePastTimePage, AnalyzePDFPage):
+        for F in (HomePage, AnalyzeRealTimePage, AnalyzePastTimePage, AnalyzePDFPage, Results):
             page_name = F.__name__
             frame = F(parent=self.main_content, controller=self)
             self.frames[page_name] = frame
@@ -63,6 +66,8 @@ class MainContent(ctk.CTkFrame):
 
     def show_analyze_pdf(self):
         self.show_frame("AnalyzePDFPage")
+    def show_results(self):
+        self.show_frame("Results")
 
     def logout(self):
         self.controller.show_frame("MyLogin")

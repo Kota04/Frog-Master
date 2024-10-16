@@ -23,6 +23,8 @@ class AnalyzePastTimePage(ctk.CTkFrame):
 
         self.submit_button = ctk.CTkButton(self.container, text="Submit", command=self.submit)
         self.submit_button.place(relx=0.5, rely=0.8, anchor="center")
+        
+        
 
         self.file_path = None  
 
@@ -39,16 +41,15 @@ class AnalyzePastTimePage(ctk.CTkFrame):
                 self.status_label.configure(text="File size exceeds 5MB.")
             else:
                 self.status_label.configure(text=f"File '{os.path.basename(self.file_path)}' uploaded successfully.")
+    def show_frame(self, page_name):
+        frame = self.frames[page_name]
+        frame.tkraise()
 
     def submit(self):
         if self.file_path:
-            # Run the shell script with the file path as an argument
             script_path = "./PastTraffic.sh"
             try:
-                # Call the shell script with the file path
                 result = subprocess.run(['sudo','bash', script_path, self.file_path], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-                
-                # Handle script output
                 if result.returncode == 0:
                     self.status_label.configure(text="File processed successfully.")
                 else:
